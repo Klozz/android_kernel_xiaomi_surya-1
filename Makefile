@@ -799,6 +799,7 @@ KBUILD_CFLAGS += $(call cc-disable-warning, unused-but-set-variable)
 
 ifeq ($(ld-name),lld)
 KBUILD_LDFLAGS += -Ofast
+KBUILD_CFLAGS	+= -mcpu=cortex-a76 -mtune=cortex-a76
 endif
 
 KBUILD_CFLAGS += $(call cc-disable-warning, unused-const-variable)
